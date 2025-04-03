@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Pro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            background-color: #007bff;
+        }
+        .navbar-brand span {
+            color: red;
+            font-weight: bold;
+        }
+        .property-card {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><span>Real Estate Pro</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#" th:href="@{/index}"> Home </a></li>
+                    <!-- changes made  -->
+                    <li class="nav-item"><a class="nav-link" href="#" th:href="@{/propertiesimages}">Properties</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" th:href="@{/agents}">Agents</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="#">Favorites</a></li> -->
+                    <li class="nav-item"><a class="nav-link" href="#" th:href="@{/pricing}">Pricing</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="#">Contact</a></li> -->
+                    <li class="nav-item"><a class="nav-link" href="#" th:href="@{/userform}">User Form</a></li>
+                    <!-- <li class="nav-item"><button class="btn btn-dark">Register</button></li>
+                    <li class="nav-item"><button class="btn btn-primary">Profile</button></li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="container text-center my-4">
+        <h2><span style="color: red;">Real Estate Pro</span>: Comprehensive Property Management System</h2>
+        <p>Streamline Property Listings, Tenant Management, and Financial Operations with Ease</p>
+    </div>
+
+       <!-- house Listings -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card property-card">
+                    <img src="house3.jpg" class="card-img-top" alt="House 1">
+                    <div class="card-body">
+                        <h5 class="card-title">$1,300,000</h5>
+                        <h6 class="card-title">34 DUNURE CRESCENT
+                            Brampton (Fletcher's Meadow), Ontario L7A2Y6
+                            MLS® Number: W12050901</h6>
+                        <h7 class="card-title">🛏️ 4+1 Bedrooms </h7>
+                        <h7 class="card-title">🛁 4 Bathrooms </h7>
+                        <h7 class="card-title">🏠 1800 - 2000 Square Feet </h7>
+                        <br>
+                         <h4>Listing Description</h4>
+                        <p>Amazing 4 Bedroom Detached Home with Loft and 1 bedroom basement apartment with separate entrance. 
+                            Upgraded With New garage door & Kitchen With Modern Cabinetry, granite Countertop in the kitchen. 
+                            Property Is In High Demand Area. Close To Schools, Hwy, Shopping Centers & Mins to Go Station. 
+                            Hardwood & Ceramic On Main Floor, Inside Access To Double Car Garage . 
+                            Fully Fenced Backyard with interlocking. - great for investors as property is leased for $4900/month (40145991)
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
